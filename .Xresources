@@ -1,0 +1,142 @@
+! Urxvt colors (gruvbox)
+*.cursorColor:  #ebdbb2
+*.background: #282828
+*.foreground: #ebdbb2
+
+! black
+*.color0:       #282828
+*.color8:       #928374
+
+! red
+*.color1:       #cc241d
+*.color9:       #fb4934
+
+! green
+*.color2:       #98971a
+*.color10:      #b8bb26
+
+! yellow
+*.color3:       #d79921
+*.color11:      #fabd2f
+
+! blue
+*.color4:       #458588
+*.color12:      #83a598
+
+! magenta
+*.color5:       #b16286
+*.color13:      #d3869b
+
+! cyan
+*.color6:       #689d6a
+*.color14:      #8ec07c
+
+! white
+*.color7:       #a89984
+*.color15:      #ebdbb2
+
+! Urxvt 256 color stuff (Gruvbox themed)
+URxvt.color24:  #076678
+URxvt.color66:  #427b58
+URxvt.color88:  #9d0006
+URxvt.color96:  #8f3f71
+URxvt.color100: #79740e
+URxvt.color108: #8ec07c
+URxvt.color109: #83a598
+URxvt.color130: #af3a03
+URxvt.color136: #b57614
+URxvt.color142: #b8bb26
+URxvt.color167: #fb4934
+URxvt.color175: #d3869b
+URxvt.color208: #fe8019
+URxvt.color214: #fabd2f
+URxvt.color223: #ebdbb2
+URxvt.color228: #f2e5bc
+URxvt.color229: #fbf1c7
+URxvt.color230: #f9f5d7
+URxvt.color234: #1d2021
+URxvt.color235: #282828
+URxvt.color236: #32302f
+URxvt.color237: #3c3836
+URxvt.color239: #504945
+URxvt.color241: #665c54
+URxvt.color243: #7c6f64
+URxvt.color244: #928374
+URxvt.color245: #928374
+URxvt.color246: #a89984
+URxvt.color248: #bdae93
+URxvt.color250: #d5c4a1
+
+! Color palette for light desktop image
+#define bgl_blue	#A3BCBE
+#define bgl_cream	#FFE3B5
+#define bgl_red		#B07D6A	
+#define bgl_black	#3B3A35
+#define bgl_white	#FEFEF4
+
+! Color palette for dark desktop image
+#define bgd_black	#3B3A35
+#define bgd_white	#FEFEF4
+#define bgd_darkblue	#01002B
+#define bgd_oceanblue	#01468A
+#define bgd_lightblue	#0182CF
+#define bgd_skyblue	#64ACD8
+#define bgd_turquoise	#5ED0FD
+#define bgd_darkish_blue #050027
+
+! Colors
+#define black 		#1C1C1C
+#define gray		#CCCACA
+#define red		#B06A58
+#define green		#95B47B
+#define yellow		#E5C078
+#define	blue		#58698C
+#define	magenta		#7B5E8D
+#define	cyan		#82A1B2
+
+! Define amount of transparency for window
+#define trans 80
+
+! copy paste in terminal
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+
+URxvt*font: xft:Source\ Code\ Pro:size=11:antialias=true:hinting=true,\
+				xft:Powerline,\
+				xft:Symbola:size=9,\
+				xft:FontAwesome
+URxvt.internalBorder: 12
+URxvt.borderColor:[trans]black
+URxvt.scrollBar: false
+! URxvt.colorBD: 
+! URxvt.colorIT: 
+! URxvt.colorUL: 
+URxvt.tintColor: red
+URxvt.depth: 32
+URxvt.cursorUnderline: 1
+URxvt.letterSpace: -1
+URxvt*loginShell: false
+URxvt.background: [trans]black
+URxvt.foreground: bgl_white
+
+! Xft settings 
+Xft.dpi 147 ! Screen DPI (true 147)
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintnone
+Xft.rgba: rgb
+Xft.antialiasing: true
+
+! ROFI CONFIG FOR LIGHT DESKTOP IMAGE
+! rofi colors
+! rofi.color-enabled true
+! State:		'bg'	 'fg'     'hlbg'   'bgalt'  'hlfg'
+! rofi.color-normal:	#006D9BAB, #FFE3B5, #006D9BAB, #006D9BAB, #65737E
+! rofi.color-active:	#006D9BAB, #FFE3B5, #006D9BAB, #006D9BAB, #65737E
+! rofi.color-urgent: 	#006D9BAB, #B07D6A, #006D9BAB, #006D9BAB, #65737E
+
+!			'background' 'border'
+! rofi.color-window:	#CCA3BCBE, #CC6D9BAB
+! Separator
+! rofi.separator-style: non
+

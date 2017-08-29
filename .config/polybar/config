@@ -1,0 +1,279 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+primary = #FFB52A
+secondary = #E60053
+alert = #BD2C40
+
+background-white = #DDF8F8FA
+background-black = #DD08090E
+background-black-alt = #DD3B3A35
+
+foreground-white = #DFDFDF
+foreground-black = #3A3A3A
+foreground-alt = #9a9a9a
+
+theme-grey = #993B3A35
+theme-white = #F8F8FA
+theme_purple = #C07D6A
+theme-orange = #FFB52A
+theme-green = #39F014
+theme-red = #5E0D2A
+
+
+[bar/top]
+wm-restack = bspwm
+width = 100%
+height = 33
+dpi = 144
+radius-bottom = 7
+fixed-center = true
+line-size = 3
+separator = |
+;override-redirect = true
+
+background = ${colors.background-white}
+foreground = ${colors.foreground-black}
+
+border-left-size = 5
+border-right-size = 5
+border-top-size = 5
+border-bottom-size = 0
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Inconsolata:size=13;3
+font-1 = FontAwesome:size=12:;4
+
+modules-left = powermenu
+modules-center = bspwm
+modules-right = temperature volume battery wlan date
+
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+; vim:ft=dosini
+
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = 
+label-focused-foreground = ${colors.foreground-black}
+;label-focused-underline= ${colors.theme-red}
+label-focused-padding = 1
+
+label-occupied = 
+label-occupied-foreground = ${colors.foreground-alt}
+;label-occupied-underline= ${colors.theme-red}
+label-occupied-padding = 1
+
+label-urgent = 
+label-urgent-foreground = ${colors.alert}
+;label-urgent-underline = ${colors.theme-red}
+label-urgent-padding = 1
+
+label-empty = 
+label-empty-foreground = ${colors.foreground-alt}
+;label-empty-underline= ${colors.theme-red}
+label-empty-padding = 1
+
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+
+label-connected =  %essid%
+format-connected = <label-connected>
+label-connected-foreground = ${colors.foreground-black}
+;format-connected-underline = ${colors.fw-black-rose}
+label-connected-maxlen = 12
+
+label-disconnected = 
+format-disconnected = <label-disconnected>
+label-disconnected-foreground = ${colors.foreground-alt}
+;format-disconnected-underline = ${self.format-connected-underline}
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = "%Y-%m-%d"
+
+time = "%H:%M "
+time-alt = "%H:%M:%S "
+
+label = %date% %time%
+format-date = <label>
+format-prefix = ""
+format-foreground = ${colors.foreground-black}
+;format-underline = ${colors.fw-black-rose}
+
+
+[module/volume]
+type = internal/volume
+
+label-volume =  %percentage%%
+label-volume-foreground = ${colors.foreground-black}
+;format-volume-underline = ${colors.fw-black-rose}
+
+label-muted = 
+label-muted-foreground = ${colors.foreground-alt}
+;format-muted-underline = ${self.format-volume-underline}
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 99
+
+label-charging = %percentage%%
+format-charging = <label-charging>
+format-charging-prefix = ""
+format-charging-foreground = ${colors.foreground-black}
+;format-charging-underline = ${colors.theme-orange}
+
+label-full = %percentage%
+format-full = <label-full>
+format-full-prefix = " "
+format-full-foreground = ${colors.foreground-black}
+;format-full-underline = ${colors.theme-green}
+
+label-discharging = %percentage%%
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.foreground-black}
+;format-discharging-underline = ${colors.fw-black-rose}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+;ramp-capacity-foreground = ${colors.foreground-black}
+
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 1
+warn-temperature = 85
+
+label = %temperature%
+format = <ramp> <label>
+;format-underline = ${colors.fw-black-rose}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-foreground = ${colors.foreground-black}
+
+label-warn =  %temperature%
+format-warn = <label-warn>
+format-warn-prefix = ""
+format-warn-foreground = ${colors.alert}
+;format-warn-underline = ${colors.theme-red}
+
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+;format-underline = ${colors.fw-black-rose}
+
+label-open = 
+label-open-foreground = ${colors.foreground-black}
+label-open-padding = 1
+;format-open-underline = ${self.format-underline}
+
+label-close =  Cancel
+label-close-foreground = ${colors.foreground-black}
+label-close-padding = 1
+;format-close-underline = ${self.format-underline}
+
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 =  Power off
+menu-0-0-exec = menu-open-1
+menu-0-1 =  Reboot
+menu-0-1-exec = menu-open-2
+menu-0-2  =  Lock
+menu-0-2-exec = menu-open-3
+
+menu-1-0 = Cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = Power off
+menu-1-1-exec = systemctl poweroff
+
+menu-2-0 = Cancel
+menu-2-0-exec = menu-open-0
+menu-2-1 = Reboot
+menu-2-1-exec = systemctl reboot
+
+menu-3-0 = Cancel
+menu-3-0-exec = menu-open-0
+menu-3-1 = Lock
+menu-3-1-exec = ~/lock.sh
+
+
+; ===============================
+;
+; Unused modules
+;
+; ===============================
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-black}
+
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+;format-underline = ${colors.fw-black-rose}
+label = cpu %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+;format-underline = ${colors.fw-black-rose}
+label = ram %percentage_used%%

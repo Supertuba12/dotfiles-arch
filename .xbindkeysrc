@@ -1,0 +1,39 @@
+# Screen brightness control
+#
+# Increase
+"light -A 5"
+  XF86MonBrightnessUp
+# Decrease
+"light -U 5"
+ XF86MonBrightnessDown
+
+# Keyboard backlight control
+#
+# Increase
+"light -Ak 5"
+  XF86KbdBrightnessUp
+# Decrease
+"light -Uk 5"
+  XF86KbdBrightnessDown
+
+# Multimedia control
+#
+# Volume up
+"pulseaudio-ctl up 2"
+  XF86AudioRaiseVolume
+# Volume down
+"pulseaudio-ctl down 2"
+  XF86AudioLowerVolume
+# Mute
+"pulseaudio-ctl mute"
+  XF86AudioMute
+# Play/pause
+"playerctl play-pause"
+  XF86AudioPlay
+  XF86AudioPause
+# Next
+"playerctl next"
+  XF86AudioNext
+# Previous/Rewind
+"playerctl previous"
+  XF86AudioPrev
