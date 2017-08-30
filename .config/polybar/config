@@ -156,7 +156,7 @@ format-charging-prefix = ""
 format-charging-foreground = ${colors.foreground-black}
 ;format-charging-underline = ${colors.theme-orange}
 
-label-full = %percentage%
+label-full = %percentage%%
 format-full = <label-full>
 format-full-prefix = " "
 format-full-foreground = ${colors.foreground-black}
