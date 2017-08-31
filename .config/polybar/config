@@ -135,9 +135,13 @@ format-foreground = ${colors.foreground-black}
 [module/volume]
 type = internal/volume
 
-label-volume =  %percentage%%
+label-volume = %percentage%%
+format-volume = <ramp-volume> <label-volume>
 label-volume-foreground = ${colors.foreground-black}
 ;format-volume-underline = ${colors.fw-black-rose}
+
+ramp-volume-0 = 
+ramp-volume-1 = 
 
 label-muted = 
 label-muted-foreground = ${colors.foreground-alt}
