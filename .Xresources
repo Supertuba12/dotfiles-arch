@@ -1,39 +1,113 @@
 ! Urxvt colors (gruvbox)
-*.cursorColor:  #ebdbb2
-*.background: #282828
-*.foreground: #ebdbb2
+! *.cursorColor:  #ebdbb2
+! *.background: #282828
+! *.foreground: #ebdbb2
 
 ! black
-*.color0:       #282828
-*.color8:       #928374
+! *.color0:       #282828
+! *.color8:       #928374
 
 ! red
-*.color1:       #cc241d
-*.color9:       #fb4934
+! *.color1:       #cc241d
+! *.color9:       #fb4934
 
 ! green
-*.color2:       #98971a
-*.color10:      #b8bb26
+! *.color2:       #98971a
+! *.color10:      #b8bb26
 
 ! yellow
-*.color3:       #d79921
-*.color11:      #fabd2f
+! *.color3:       #d79921
+! *.color11:      #fabd2f
 
 ! blue
-*.color4:       #458588
-*.color12:      #83a598
+! *.color4:       #458588
+! *.color12:      #83a598
 
 ! magenta
-*.color5:       #b16286
-*.color13:      #d3869b
+! *.color5:       #b16286
+! *.color13:      #d3869b
 
 ! cyan
-*.color6:       #689d6a
-*.color14:      #8ec07c
+! *.color6:       #689d6a
+! *.color14:      #8ec07c
 
 ! white
-*.color7:       #a89984
-*.color15:      #ebdbb2
+! *.color7:       #a89984
+! *.color15:      #ebdbb2
+
+1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+! Breeze Dark
+*.foreground:   #cfcfc2
+*.background:   #232629
+*.cursorColor:  #cfcfc2
+
+! black
+*.color0:       #2a2e32
+*.color8:       #31363b
+
+! red
+*.color1:       #c0392b
+*.color9:       #f44f4f
+
+! green
+*.color2:       #218058
+*.color10:      #27ae60
+
+! yellow
+*.color3:       #fdbc4b
+*.color11:      #fdbc4b
+
+! blue
+*.color4:       #2980b9
+*.color12:      #0099ff
+
+! magenta
+*.color5:       #8e44ad
+*.color13:      #af81ff
+
+! cyan
+*.color6:       #27aeae
+*.color14:      #31dddd
+
+! white
+*.color7:       #acada1
+*.color15:      #cfd0c2
+
 
 ! Urxvt 256 color stuff (Gruvbox themed)
 URxvt.color24:  #076678
