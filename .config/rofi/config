@@ -8,13 +8,15 @@ rofi.separator-style: none
 ! -----------
 ! ROFI Colors
 ! ------------
+! Background color for skull: #CC5E0D2A
 rofi.color-enabled true
 !	State:		'background' 'border'
-rofi.color-window:	#CC5E0D2A, #CC5E0D2A
+rofi.color-window:	#CC7D2650, #CC5E0D2A
 ! State:		'bg'	   'fg'     'hlbg'     'bgalt'    'hlfg'
 rofi.color-normal:	#00FFFFFF, #E1F9FC, #00FFFFFF, #00FFFFFF, #F3BC1A
 rofi.color-active:	#00FFFFFF, #E1F9FC, #00FFFFFF, #00FFFFFF, #F3BC1A
 rofi.color-urgent: 	#00FFFFFF, #B07D6A, #00FFFFFF, #00FFFFFF, #F3BC1A
 
+! 73264D
 
 

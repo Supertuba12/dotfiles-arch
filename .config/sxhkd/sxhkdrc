@@ -16,7 +16,7 @@ super + alt + Escape
 
 # Lock laptop (i3lock)
 super + z
-	~/lock.sh
+	~/scripts/lock.sh
 
 #
 # bspwm hotkeys
