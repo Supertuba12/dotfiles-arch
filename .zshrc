@@ -22,6 +22,6 @@ alias chrome='google-chrome-stable'
 # functions
 # 
 # virutalenv workon
-#function workon() { 
-#  source $1/bin/activate
-#}
+function workon() { 
+  source $1/bin/activate
+}

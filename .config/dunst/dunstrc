@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "550x5-12+50"
+    geometry = "550x5-12+56"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -198,7 +198,7 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#5E0D2A"
+    background = "#73264D"
     foreground = "#F3BC1A"
     timeout = 4
     # Icon for notifications with low urgency, uncomment to enable
@@ -206,7 +206,7 @@
 
 
 [urgency_normal]
-    background = "#5E0D2A"
+    background = "#73264D"
     foreground = "#F3BC1A"
     timeout = 6
     # Icon for notifications with normal urgency, uncomment to enable

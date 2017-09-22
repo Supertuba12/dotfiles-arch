@@ -1,11 +1,11 @@
 # Screen brightness control
 #
 # Increase
-"light -A 8"
+"light -A 10"
   XF86MonBrightnessUp
 
 # Decrease
-"light -U 8"
+"light -U 10"
  XF86MonBrightnessDown
 
 
@@ -22,11 +22,11 @@
 # Multimedia control
 #
 # Volume up
-"pulseaudio-ctl up 2"
+"pulseaudio-ctl up 8"
   XF86AudioRaiseVolume
 
 # Volume down
-"pulseaudio-ctl down 2"
+"pulseaudio-ctl down 8"
   XF86AudioLowerVolume
 
 # Mute
