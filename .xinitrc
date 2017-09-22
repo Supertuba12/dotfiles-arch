@@ -40,5 +40,5 @@ compton --unredir-if-possible &
 $HOME/.config/polybar/launch.sh &
 ~/.fehbg &
 xbindkeys -p &
-redshift &
+kdeconnect-cli &
 exec bspwm
