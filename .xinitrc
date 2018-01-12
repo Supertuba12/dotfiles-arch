@@ -32,13 +32,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+setxkbmap -option apple:badmap
 sxhkd &
 dunst &
 xrandr --dpi 147 &
 xsetroot -cursor_name left_ptr &
-compton --unredir-if-possible &
-$HOME/.config/polybar/launch.sh &
-~/.fehbg &
 xbindkeys -p &
 kdeconnect-cli &
 exec bspwm

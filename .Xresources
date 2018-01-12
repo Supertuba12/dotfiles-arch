@@ -1,197 +1,84 @@
-! Urxvt colors (gruvbox)
-! *.cursorColor:  #ebdbb2
-! *.background: #282828
-! *.foreground: #ebdbb2
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
 
-! black
-! *.color0:       #282828
-! *.color8:       #928374
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
 
-! red
-! *.color1:       #cc241d
-! *.color9:       #fb4934
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
 
-! green
-! *.color2:       #98971a
-! *.color10:      #b8bb26
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
 
-! yellow
-! *.color3:       #d79921
-! *.color11:      #fabd2f
-
-! blue
-! *.color4:       #458588
-! *.color12:      #83a598
-
-! magenta
-! *.color5:       #b16286
-! *.color13:      #d3869b
-
-! cyan
-! *.color6:       #689d6a
-! *.color14:      #8ec07c
-
-! white
-! *.color7:       #a89984
-! *.color15:      #ebdbb2
-
-1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-! Breeze Dark
-*.foreground:   #cfcfc2
-*.background:   #232629
-*.cursorColor:  #cfcfc2
-
-! black
-*.color0:       #2a2e32
-*.color8:       #31363b
-
-! red
-*.color1:       #c0392b
-*.color9:       #f44f4f
-
-! green
-*.color2:       #218058
-*.color10:      #27ae60
-
-! yellow
-*.color3:       #fdbc4b
-*.color11:      #fdbc4b
-
-! blue
-*.color4:       #2980b9
-*.color12:      #0099ff
-
-! magenta
-*.color5:       #8e44ad
-*.color13:      #af81ff
-
-! cyan
-*.color6:       #27aeae
-*.color14:      #31dddd
-
-! white
-*.color7:       #acada1
-*.color15:      #cfd0c2
-
-
-! Urxvt 256 color stuff (Gruvbox themed)
-URxvt.color24:  #076678
-URxvt.color66:  #427b58
-URxvt.color88:  #9d0006
-URxvt.color96:  #8f3f71
-URxvt.color100: #79740e
-URxvt.color108: #8ec07c
-URxvt.color109: #83a598
-URxvt.color130: #af3a03
-URxvt.color136: #b57614
-URxvt.color142: #b8bb26
-URxvt.color167: #fb4934
-URxvt.color175: #d3869b
-URxvt.color208: #fe8019
-URxvt.color214: #fabd2f
-URxvt.color223: #ebdbb2
-URxvt.color228: #f2e5bc
-URxvt.color229: #fbf1c7
-URxvt.color230: #f9f5d7
-URxvt.color234: #1d2021
-URxvt.color235: #282828
-URxvt.color236: #32302f
-URxvt.color237: #3c3836
-URxvt.color239: #504945
-URxvt.color241: #665c54
-URxvt.color243: #7c6f64
-URxvt.color244: #928374
-URxvt.color245: #928374
-URxvt.color246: #a89984
-URxvt.color248: #bdae93
-URxvt.color250: #d5c4a1
-
-! Color palette for light desktop image
-#define bgl_blue	#A3BCBE
-#define bgl_cream	#FFE3B5
-#define bgl_red		#B07D6A	
-#define bgl_black	#3B3A35
-#define bgl_white	#FEFEF4
-
-! Color palette for dark desktop image
-#define bgd_black	#3B3A35
-#define bgd_white	#FEFEF4
-#define bgd_darkblue	#01002B
-#define bgd_oceanblue	#01468A
-#define bgd_lightblue	#0182CF
-#define bgd_skyblue	#64ACD8
-#define bgd_turquoise	#5ED0FD
-#define bgd_darkish_blue #050027
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
 
 ! Colors
-#define black 		#1C1C1C
-#define gray		#CCCACA
+#define white		#D3D3D3
+#define black 		#232629
+#define gray		#383838
 #define red		#B06A58
 #define green		#95B47B
 #define yellow		#E5C078
 #define	blue		#58698C
 #define	magenta		#7B5E8D
 #define	cyan		#82A1B2
+#define cream		#F4E8CE
 
 ! Define amount of transparency for window
-#define trans 80
+#define trans 100
 
-! copy paste in terminal
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-
-URxvt*font: xft:Source\ Code\ Pro:size=11:antialias=true:hinting=true,\
+URxvt*font: xft:Source Code Pro:size=11:antialias=true:hinting=true,\
 				xft:Powerline,\
 				xft:Symbola:size=9,\
 				xft:FontAwesome
-URxvt.internalBorder: 12
-URxvt.borderColor:[trans]black
+
+URxvt.internalBorder:30
+! URxvt.borderColor:[trans]black
 URxvt.scrollBar: false
 ! URxvt.colorBD: 
 ! URxvt.colorIT: 
 ! URxvt.colorUL: 
-URxvt.tintColor: red
+! URxvt.tintColor: red
 URxvt.depth: 32
 URxvt.cursorUnderline: 1
 URxvt.letterSpace: -1
 URxvt*loginShell: false
-URxvt.background: [trans]black
-URxvt.foreground: bgl_white
+! URxvt.background: [trans]black
+! URxvt.foreground: white
 
 ! Xft settings 
 Xft.dpi 147 ! Screen DPI (true 147)
@@ -200,17 +87,4 @@ Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintnone
 Xft.rgba: rgb
 Xft.antialiasing: true
-
-! ROFI CONFIG FOR LIGHT DESKTOP IMAGE
-! rofi colors
-! rofi.color-enabled true
-! State:		'bg'	 'fg'     'hlbg'   'bgalt'  'hlfg'
-! rofi.color-normal:	#006D9BAB, #FFE3B5, #006D9BAB, #006D9BAB, #65737E
-! rofi.color-active:	#006D9BAB, #FFE3B5, #006D9BAB, #006D9BAB, #65737E
-! rofi.color-urgent: 	#006D9BAB, #B07D6A, #006D9BAB, #006D9BAB, #65737E
-
-!			'background' 'border'
-! rofi.color-window:	#CCA3BCBE, #CC6D9BAB
-! Separator
-! rofi.separator-style: non
 
