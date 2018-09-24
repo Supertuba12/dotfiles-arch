@@ -50,25 +50,27 @@ theme-cyan = ${xrdb:*.color6}
 [bar/main]
 monitor = eDP1
 wm-restack = bspwm
-width = 100%
+width = 2854
 height = 40
 dpi = 144
-radius-bottom = 3
+radius = 3
 fixed-center = true
 line-size = 4
 ;separator = |
-;override-redirect = true
+offset-x = 13
+offset-y = 10
 
 background = ${colors.background-black}
 foreground = ${colors.foreground-white}
 
-border-left-size = 0
-border-right-size = 0
-border-top-size = 0
-border-bottom-size = 0
+border-size = 0
+;border-left-size = 0
+;border-right-size = 0
+;border-top-size = 0
+;border-bottom-size = 0
 
 padding-left = 1
-padding-right = 0
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
@@ -80,31 +82,30 @@ font-3 = siji:pixelsize=10;4
 font-4 = mplus Nerd Font:pixelsize=10;3
 font-5 = icomoon:size=13;5
 
-modules-left = spotifytitle
-modules-center = bspwm
-modules-right = xbacklight temperature volume battery wlan date
+modules-left = bspwm
+modules-center = date
+modules-right = xbacklight volume battery wlan
 
 [bar/external]
-monitor = DP1
+monitor = HDMI3
 wm-restack = bspwm
-width = 100%
+width = 1894
 height = 40
-dpi = 100
-radius-bottom = 3
+dpi = 144
+radius = 3
 fixed-center = true
 line-size = 4
 ;separator = |
-;override-redirect = true
+offset-x = 13
+offset-y = 10
+
 
 background = ${colors.background-grey}
 foreground = ${colors.foreground-white}
 
-border-left-size = 0
-border-right-size = 0
-border-top-size = 0
-border-bottom-size = 0
+border-size = 0
 
-padding-left = 0
+padding-left = 1
 padding-right = 0
 
 module-margin-left = 1
@@ -117,9 +118,50 @@ font-3 = siji:pixelsize=10;4
 font-4 = mplus Nerd Font:pixelsize=10;3
 font-5 = icomoon:size=15;5
 
-modules-left = powermenu
+modules-left = spotifytitle
 modules-center = bspwm
-modules-right = xbacklight temperature volume battery wlan date
+modules-right = volume battery wlan date
+
+[bar/external2]
+monitor = DP1
+wm-restack = bspwm
+width = 2530
+height = 40
+dpi = 144
+radius = 3
+fixed-center = true
+line-size = 4
+;separator = |
+offset-x = 13
+offset-y = 10
+
+
+background = ${colors.background-black}
+foreground = ${colors.foreground-white}
+
+border-size = 0
+;border-left-size = 0
+;border-right-size = 0
+;border-top-size = 0
+;border-bottom-size = 0
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Inconsolata:size=12;3
+font-1 = FontAwesome:size=11;4
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;3
+font-3 = siji:pixelsize=10;4
+font-4 = mplus Nerd Font:pixelsize=10;3
+font-5 = icomoon:size=13;5
+
+modules-left = bspwm
+modules-center = date
+modules-right = volume battery wlan 
+
 
 [settings]
 screenchange-reload = true
@@ -162,6 +204,7 @@ label-empty-padding = 1
 [module/wlan]
 type = internal/network
 interface = wlp3s0
+interval=3
 
 label-connected =  %essid%
 format-connected = <label-connected>
@@ -178,22 +221,22 @@ format-disconnected-underline = ${self.format-connected-underline}
 [module/date]
 type = internal/date
 interval = 5
-date = "%a"
+date = "| %A %m/%d"
 date-alt = "%Y-%m-%d"
 
-time = "%H:%M "
-time-alt = "%H:%M:%S "
+time = "%H:%M"
+time-alt = "%H:%M:%S"
 
-label = %date% %time%
+label = %time% %date%
 format-date = <label>
 format-prefix = "  "
 format-foreground = foreground
-format-underline = ${colors.theme-red}
-format-background = ${colors.theme-red}
+;format-underline = ${colors.theme-red}
+; format-background = ${colors.theme-red}
 
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 label-volume = %percentage%%
 format-volume = <ramp-volume> <label-volume>

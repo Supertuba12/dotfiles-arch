@@ -8,6 +8,9 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'  
+Plug 'scrooloose/nerdcommenter'
+Plug 'lervag/vimtex'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -83,6 +86,9 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
+" Remap jj to escpae insert mode
+inoremap jj <ESC>
+vnoremap jj <ESC>
 " Textmate holdouts
 
 " Formatting
@@ -96,6 +102,7 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color scheme (terminal)
+let g:nord_italic = 1
 let g:nord_italic_comments = 1
-let g:nord_comment_brightness = 12
+let g:nord_comment_brightness = 20
 colorscheme nord

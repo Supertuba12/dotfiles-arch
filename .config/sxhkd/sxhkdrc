@@ -53,11 +53,8 @@ super + ctrl + {x,y,z}
 # focus/swap
 #
 # focus or send to the given desktop
-super + {_,shift + }{1-5}
-	bspc {desktop -f,node -d} '^{1-5}'
-
-super + {_,shift + }{q,w,e,r}
-bspc {desktop -f,node -d} '{6,7,8,9}'
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} '^{1-9}'
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}

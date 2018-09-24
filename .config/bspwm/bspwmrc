@@ -1,8 +1,8 @@
 #!/bin/sh
 
-bspc monitor -d I II III IV V
-bspc monitor DP1 -d VI VII VIII IX
-bspc monitor HDMI3 -d X
+bspc monitor eDP1 -d I II III IV V
+bspc monitor DP1 -d VI VII 
+bspc monitor HDMI3 -d VIII IX X
 
 bspc config border_width         3
 bspc config window_gap          12
@@ -15,7 +15,13 @@ bspc config focus_follows_pointer true
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Thunar:thunar state=floating
+bspc rule -a Nightly state=tiled
 
-compton --unredir-if-possible &
+bspc rule -a Nightly:Browser state=floating
+bspc rule -a Nightly:Dialog state=floating
+bspc rule -a Nightly:firefox state=floating
+bspc rule -a Nightly:Prompt state=floating
+
+compton --unredir-if-possible --config ~/.config/compton.conf &
 ~/.fehbg &
 $HOME/.config/polybar/launch.sh &

@@ -62,7 +62,6 @@
 #define trans 100
 
 URxvt*font: xft:Source Code Pro:size=11:antialias=true:hinting=true,\
-				xft:Powerline,\
 				xft:Symbola:size=9,\
 				xft:FontAwesome
 

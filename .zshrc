@@ -26,5 +26,7 @@ alias chrome='google-chrome-stable'
 # 
 # virutalenv workon
 function workon() { 
-  source $1/bin/activate
+  source $HOME/virtualenvs/$1/bin/activate
 }
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
+export PATH=$JAVA_HOME/bin:$PATH;
