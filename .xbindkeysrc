@@ -12,11 +12,11 @@
 # Keyboard backlight control
 #
 # Increase
-"light -Ak 5"
+"light -A 5 -s sysfs/leds/smc::kbd_backlight"
   XF86KbdBrightnessUp
 
 # Decrease
-"light -Uk 5"
+"light -U 5 -s sysfs/leds/smc::kbd_backlight"
   XF86KbdBrightnessDown
 
 # Multimedia control

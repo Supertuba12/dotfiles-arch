@@ -1,30 +1,20 @@
-;primary = #FFB52A
-;secondary = #E60053
-;alert = #BD2C40
-
-;background-white = #F8F8FA
-;background-black = #DD303030
-; background-grey = #383838
-;background-transparent = #00FFFFFF
-;background-black-alt = #DD3B3A35
-
-;foreground-white = #D3D3D3
-;foreground-white = #F4E8CE
-;foreground-black = #3A3A3A
-;foreground-alt = #808080
-;foreground-alt = #8E8476
-
-;theme-grey = #993B3A35
-;theme-white = #ACADA1
-;theme-purple = #C07D6A
-;theme-yellow = #FDBC4B
-;theme-orange = #FFB52A
-;theme-red = #DC0405
-;theme-green = #218058
-;theme-blue = #2980B9
-;theme-cyan = #27AEAE
-
 [colors]
+nord0 = #2E3440
+nord1 = #3B4252
+nord2 = #434C5E
+nord3 = #4C566A
+nord4 = #D8DEE9
+nord5 = #E5E9F0
+nord6 = #ECEFF4
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+nord10 = #5E81AC
+nord11 = #BF616A
+nord12 = #D08770
+nord13 = #EBCB8B
+nord14 = #A3BE8C
+nord15 = #B48EAD
 
 primary = #FFB52A
 secondary = #E60053
@@ -47,29 +37,26 @@ theme-purple = ${xrdb:*.color13}
 theme-blue = #5E81AC
 theme-cyan = ${xrdb:*.color6}
 
+; =========================================================
+
 [bar/main]
 monitor = eDP1
 wm-restack = bspwm
-width = 2854
+width = 99%
 height = 40
 dpi = 144
-radius = 3
+radius = 5
 fixed-center = true
 line-size = 4
-;separator = |
-offset-x = 13
-offset-y = 10
+offset-x = 0.5%
+offset-y = 0.75%
 
-background = ${colors.background-black}
-foreground = ${colors.foreground-white}
+background = ${colors.nord5}
+foreground = ${colors.nord0}
 
 border-size = 0
-;border-left-size = 0
-;border-right-size = 0
-;border-top-size = 0
-;border-bottom-size = 0
 
-padding-left = 1
+padding-left = 0
 padding-right = 1
 
 module-margin-left = 1
@@ -89,24 +76,22 @@ modules-right = xbacklight volume battery wlan
 [bar/external]
 monitor = HDMI3
 wm-restack = bspwm
-width = 1894
+width = 99%
 height = 40
 dpi = 144
-radius = 3
+radius = 5
 fixed-center = true
 line-size = 4
-;separator = |
-offset-x = 13
-offset-y = 10
+offset-x = 0.5%
+offset-y = 0.75%
 
-
-background = ${colors.background-grey}
-foreground = ${colors.foreground-white}
+background = ${colors.nord5}
+foreground = ${colors.nord0}
 
 border-size = 0
 
-padding-left = 1
-padding-right = 0
+padding-left = 0
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
@@ -125,27 +110,21 @@ modules-right = volume battery wlan date
 [bar/external2]
 monitor = DP1
 wm-restack = bspwm
-width = 2530
+width = 99%
 height = 40
 dpi = 144
-radius = 3
+radius = 5
 fixed-center = true
 line-size = 4
-;separator = |
-offset-x = 13
-offset-y = 10
+offset-x = 0.5%
+offset-y = 0.75%
 
-
-background = ${colors.background-black}
-foreground = ${colors.foreground-white}
+background = ${colors.nord5}
+foreground = ${colors.nord0}
 
 border-size = 0
-;border-left-size = 0
-;border-right-size = 0
-;border-top-size = 0
-;border-bottom-size = 0
 
-padding-left = 1
+padding-left = 0
 padding-right = 1
 
 module-margin-left = 1
@@ -162,6 +141,7 @@ modules-left = bspwm
 modules-center = date
 modules-right = volume battery wlan 
 
+; =========================================================
 
 [settings]
 screenchange-reload = true
@@ -170,12 +150,13 @@ screenchange-reload = true
 ;compositing-foreground = source
 ;compositing-border = over
 
+; =========================================================
 
 [global/wm]
 margin-top = 0
 margin-bottom = 0
-; vim:ft=dosini
 
+; =========================================================
 
 [module/bspwm]
 type = internal/bspwm
@@ -206,21 +187,22 @@ type = internal/network
 interface = wlp3s0
 interval=3
 
+
 label-connected =  %essid%
 format-connected = <label-connected>
-label-connected-foreground = foreground
+format-connected-foreground = foreground
 format-connected-underline = ${colors.theme-red}
 label-connected-maxlen = 12
 
 label-disconnected = 
 format-disconnected = <label-disconnected>
-label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected-foreground = ${colors.foreground-alt}
 format-disconnected-underline = ${self.format-connected-underline}
 
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 date = "| %A %m/%d"
 date-alt = "%Y-%m-%d"
 
@@ -240,14 +222,15 @@ type = internal/alsa
 
 label-volume = %percentage%%
 format-volume = <ramp-volume> <label-volume>
+format-volume-foreground = foreground
 format-volume-underline = ${colors.theme-red}
-label-volume-foreground = foreground
 
 ramp-volume-0 = 
 ramp-volume-1 = 
 
 label-muted = 
-label-muted-foreground = ${colors.foreground-alt}
+format-muted = <label-muted>
+format-muted-foreground = ${colors.foreground-alt}
 
 
 [module/battery]
@@ -281,10 +264,6 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 
 ramp-capacity-0-foreground = ${colors.theme-red}
-;ramp-capacity-1-foreground = ${colors.theme-orange}
-;ramp-capacity-2-foreground = ${colors.theme-yellow}
-;ramp-capacity-3-foreground = ${colors.theme-green}
-
 
 [module/temperature]
 type = internal/temperature
@@ -357,16 +336,19 @@ output = eDP-1
 
 label = 
 format = <label> <bar>
-label-foreground = ${colors.theme-orange}
+format-foreground = ${colors.theme-orange}
 format-underline = ${colors.theme-red}
 
 bar-width = 5 
+
 bar-indicator =  
 bar-indicator-foreground = foreground
 bar-indicator-font = 2
+
 bar-fill = ─
 bar-fill-font = 2
 bar-fill-foreground = foreground
+
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}

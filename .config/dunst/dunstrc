@@ -67,7 +67,7 @@
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
-    idle_threshold = 120
+    idle_threshold = 0
 
     ### Text ###
     font = Inconsolata 20
@@ -118,7 +118,7 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    show_age_threshold = -1
 
     # Split notifications into multiple lines if they don't fit into
     # geometry.
@@ -153,7 +153,7 @@
     sticky_history = no
 
     # Maximum amount of notifications kept in history
-    history_length = 20
+    history_length = 10
 
     ### Misc/Advanced ###
 
