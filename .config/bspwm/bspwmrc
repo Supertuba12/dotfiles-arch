@@ -19,11 +19,6 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Thunar:thunar state=floating
 bspc rule -a Nightly state=tiled
 
-bspc rule -a Nightly:Browser state=floating
-bspc rule -a Nightly:Dialog state=floating
-bspc rule -a Nightly:firefox state=floating
-bspc rule -a Nightly:Prompt state=floating
-
 compton --unredir-if-possible --config ~/.config/compton.conf &
 ~/.fehbg &
 $HOME/.config/polybar/launch.sh &
