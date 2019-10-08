@@ -80,7 +80,7 @@ URxvt*loginShell: false
 ! URxvt.foreground: white
 
 ! Xft settings 
-Xft.dpi 147					! Screen DPI (true 147)
+Xft.dpi 160					! Screen DPI (true 147)
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintnone
