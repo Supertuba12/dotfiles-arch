@@ -62,8 +62,8 @@
 #define trans 100
 
 URxvt*font: xft:Source Code Pro:size=11:antialias=true:hinting=true,\
-				xft:Symbola:size=9,\
-				xft:FontAwesome
+				xft:Symbola:size=9, \
+				xft:SauceCodePro Nerd Font Mono:regular:size=13
 
 URxvt.internalBorder:30
 ! URxvt.borderColor:[trans]black
@@ -74,7 +74,7 @@ URxvt.scrollBar: false
 ! URxvt.tintColor: red
 URxvt.depth: 32
 URxvt.cursorUnderline: 1
-URxvt.letterSpace: -1
+! URxvt.letterSpace: -1
 URxvt*loginShell: false
 ! URxvt.background: [trans]black
 ! URxvt.foreground: white
