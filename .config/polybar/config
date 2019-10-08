@@ -63,7 +63,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Inconsolata:size=12;3
-font-1 = FontAwesome:size=11;4
+font-1 = Material Design Icons:style=Regular:pixelsize=15;4
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;3
 font-3 = siji:pixelsize=10;4
 font-4 = mplus Nerd Font:pixelsize=10;3
@@ -97,7 +97,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Inconsolata:size=13;3
-font-1 = FontAwesome:size=12;4
+font-1 = Material Design Icons:style=Regular:pixelsize=15;4
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;3
 font-3 = siji:pixelsize=10;4
 font-4 = mplus Nerd Font:pixelsize=10;3
@@ -131,7 +131,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Inconsolata:size=12;3
-font-1 = FontAwesome:size=11;4
+font-1 = Material Design Icons:style=Regular:pixelsize=15;4
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;3
 font-3 = siji:pixelsize=10;4
 font-4 = mplus Nerd Font:pixelsize=10;3
@@ -161,24 +161,24 @@ margin-bottom = 0
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = 
+label-focused = 
 label-focused-foreground = foreground
-;label-focused-underline= ${colors.theme-red}
+label-focused-underline= ${colors.theme-red}
 label-focused-padding = 1
 
-label-occupied = 
+label-occupied = 難
 label-occupied-foreground = ${colors.foreground-alt}
-;label-occupied-underline= ${colors.theme-red}
+label-occupied-underline= ${colors.theme-red}
 label-occupied-padding = 1
 
-label-urgent = 
+label-urgent = 難
 label-urgent-foreground = ${colors.alert}
-;label-urgent-underline = ${colors.theme-red}
+label-urgent-underline = ${colors.theme-red}
 label-urgent-padding = 1
 
-label-empty = 
+label-empty = 
 label-empty-foreground = ${colors.foreground-alt}
-;label-empty-underline= ${colors.theme-red}
+label-empty-underline= ${colors.theme-red}
 label-empty-padding = 1
 
 
@@ -188,13 +188,13 @@ interface = wlp3s0
 interval=3
 
 
-label-connected =  %essid%
+label-connected =  %essid%
 format-connected = <label-connected>
 format-connected-foreground = foreground
 format-connected-underline = ${colors.theme-red}
 label-connected-maxlen = 12
 
-label-disconnected = 
+label-disconnected = 
 format-disconnected = <label-disconnected>
 format-disconnected-foreground = ${colors.foreground-alt}
 format-disconnected-underline = ${self.format-connected-underline}
@@ -211,7 +211,7 @@ time-alt = "%H:%M:%S"
 
 label = %time% %date%
 format-date = <label>
-format-prefix = "  "
+format-prefix = "  "
 format-foreground = foreground
 ;format-underline = ${colors.theme-red}
 ; format-background = ${colors.theme-red}
@@ -225,12 +225,15 @@ format-volume = <ramp-volume> <label-volume>
 format-volume-foreground = foreground
 format-volume-underline = ${colors.theme-red}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
-label-muted = 
+label-muted = %percentage%%
 format-muted = <label-muted>
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
+format-muted-underline = ${colors.theme-red}
 
 
 [module/battery]
@@ -241,14 +244,14 @@ full-at = 99
 
 label-charging = %percentage%%
 format-charging = <label-charging>
-format-charging-prefix = " "
+format-charging-prefix = " "
 label-charging-foreground = foreground
 format-charging-prefix-foreground = ${colors.theme-orange}
 format-charging-underline = ${colors.theme-orange}
 
 label-full = %percentage%%
 format-full = <label-full>
-format-full-prefix = " "
+format-full-prefix = " "
 label-full-foreground = foreground
 format-full-prefix-foreground = ${colors.theme-green}
 format-full-underline = ${colors.theme-green}
@@ -258,12 +261,20 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = foreground
 format-discharging-underline = ${colors.theme-red}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
+ramp-capacity-0 = 󰃸
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-10 = 
 
 ramp-capacity-0-foreground = ${colors.theme-red}
+ramp-capacity-1-foreground = ${colors.theme-red}
 
 [module/temperature]
 type = internal/temperature
